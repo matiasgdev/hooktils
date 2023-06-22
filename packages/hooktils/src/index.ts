@@ -1,1 +1,1 @@
-export * from "./modules/useScrollTo";
+export * from "./lib/useScrollTo";
