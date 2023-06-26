@@ -12,7 +12,7 @@ export default defineConfig({
       // Could also be a dictionary or array of multiple entry points
       entry: resolve("src", "index.ts"),
       name: "Hookstils",
-      fileName: (format) => `hooktils.${format}.js`,
+      fileName: (format, entry) => `${entry}.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(pckg.peerDependencies)],
