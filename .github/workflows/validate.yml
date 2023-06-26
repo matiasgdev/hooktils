@@ -13,20 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Setup node 
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install deps
-        run: npm install --legacy-peer-deps
+        run: yarn install --frozen-lockfile
 
       - name: Check types
-        run: npm ts:check
+        run: yarn ts:check
 
       - name: Unit testing
-        run: npm test
+        run: yarn test
   

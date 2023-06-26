@@ -5,6 +5,11 @@
     "test": "jest --no-coverage --silent  --verbose",
     "ts:check": "tsc --p packages/hooktils/tsconfig.json --noEmit"
   },
+  "jest": {
+    "projects": [
+      "<rootDir>/packages/hooktils/jest.config.js"
+    ]
+  },
   "workspaces": {
     "packages": [
       "packages/*"
