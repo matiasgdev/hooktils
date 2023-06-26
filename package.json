@@ -1,6 +1,10 @@
 {
   "name": "hooktils",
   "private": true,
+  "scripts": {
+    "test": "jest --no-coverage --silent  --verbose",
+    "ts:check": "tsc --p packages/hooktils/tsconfig.json --noEmit"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
