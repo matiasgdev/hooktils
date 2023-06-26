@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
 
       - name: Install deps
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Check types
         run: npm ts:check
